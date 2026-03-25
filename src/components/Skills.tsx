@@ -1,5 +1,4 @@
 import { motion } from 'motion/react';
-import Player from 'react-lottie-player';
 import {
   Code2,
   Terminal,
@@ -117,14 +116,12 @@ export default function Skills() {
                 {group.category}
               </div>
 
-              {/* Category Lottie Animation */}
-              <div className="absolute top-2 right-2 w-16 h-16 opacity-20 group-hover/card:opacity-100 transition-opacity">
-                <Player
-                  play
-                  loop
-                  path={group.lottie}
-                  style={{ width: '100%', height: '100%' }}
-                />
+              {/* Category Icon */}
+              <div className="absolute top-4 right-4 text-black/10 group-hover/card:text-accent-cyan group-hover/card:scale-110 transition-all duration-300">
+                {group.skills[0] && (() => {
+                  const Icon = group.skills[0].icon;
+                  return <Icon size={48} />;
+                })()}
               </div>
 
               <div className="mt-8 flex flex-wrap gap-4">

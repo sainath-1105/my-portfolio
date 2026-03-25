@@ -85,7 +85,7 @@ export default function App() {
                 x: mousePos.x, 
                 y: mousePos.y,
                 scale: isHovering ? 2.5 : 1,
-                backgroundColor: isHovering ? 'rgba(0, 240, 255, 0.2)' : 'transparent'
+                backgroundColor: isHovering ? 'rgba(0, 240, 255, 0.2)' : 'rgba(0, 240, 255, 0)'
               }}
               transition={{ type: 'spring', damping: 20, stiffness: 250, mass: 0.5 }}
             />

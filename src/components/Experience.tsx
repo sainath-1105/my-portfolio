@@ -44,7 +44,7 @@ export default function Experience() {
         <div className="space-y-12">
           {experiences.map((exp, i) => (
             <motion.div
-              key={exp.year}
+              key={`${exp.year}-${exp.company}-${i}`}
               className="grid grid-cols-1 md:grid-cols-4 gap-8 border-b-4 border-white/20 pb-12 group hover:border-accent-cyan transition-colors"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
